@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-    <div className="animate-changing-colors">
+    <div className="bg-gray-300">
     <Navbar/>
     <Hero/>
     </div>
