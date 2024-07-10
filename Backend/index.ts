@@ -1,24 +1,24 @@
+require('dotenv').config()
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const express = require('express')
 const mongosee = require('mongoose')
 const app = express()
 const port = 4000
+let uri = process.env.MONGO_URI
 
-const main = async() =>{
-    await mongosee.connect('mongodb://localhost:27017/',(err:any,db:any) => {
-        console.log('database connected')
-        const test1 = db.collection('testDb')
+const client = new MongoClient(uri)
 
-        test1.insertOne({name:'test'}, (err:any,result:any) =>{
-            console.log('created!')
-        })
-    })
+const run = async() =>{
+    try {
+        await client.connect()
+        await client.db("admin").command({ ping: 1 });
+        console.log("Pinged your deployment. You successfully connected to MongoDB!");
+    } catch (error) {
+        console.log(error)
+    }finally{
+       await client.close()
+    }
+   
 }
-
-app.get('/',(req:any,res:any) =>{
-    main()
-    res.send('H')
-})
-
-app.listen(port,()=>{
-    console.log(`backend running on port ${port}`)
-})
+run()
+    
