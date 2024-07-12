@@ -1,14 +1,4 @@
-"use client";
-import { useEffect } from "react";
-
 export const Navbar = () => {
-  const testApiCall = async () => {
-    await fetch("../app/api/send-url");
-  };
-  useEffect(() => {
-    testApiCall();
-  }, []);
-
   return (
     <>
       <div className="h-16 outline-dashed flex justify-between items-center">
