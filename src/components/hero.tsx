@@ -1,10 +1,9 @@
 "use client";
 
-import { useShortenLink } from "@/hooks/use-shorten-link";
+import { urlShortener } from "@/utils/url-shortener";
+import { useEffect } from "react";
 
 export const Hero = () => {
-  const { setUrlToShorten } = useShortenLink({ value: "" });
-
   return (
     <div className="h-lvh flex items-center justify-center">
       <div className="flex flex-col gap-3 text-center">
@@ -12,7 +11,7 @@ export const Hero = () => {
         <p>Shortener url, Big Impact</p>
         <input
           onKeyDown={(event) =>
-            event.key == "Enter" ? setUrlToShorten({ value: "test" }) : ""
+            event.key == "Enter" ? urlShortener(event.currentTarget.value) : ""
           }
           type="text"
           name=""

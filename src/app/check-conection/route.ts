@@ -1,20 +1,19 @@
+require("dotenv").config();
+import { eq } from "drizzle-orm";
 import { pgTable, text } from "drizzle-orm/pg-core";
 import { drizzle } from "drizzle-orm/postgres-js";
 import { NextResponse } from "next/server";
 import postgres from "postgres";
 
 export async function GET(req: Request) {
-  const query = postgres(
-    "postgres://default:D8kZ6XbCGQoa@ep-restless-mouse-a4ylaq8z.us-east-1.aws.neon.tech:5432/verceldb?sslmode=require"
-  );
+  const query = postgres(`${process.env.POSTGRES_URL}`);
+
   const db = drizzle(query);
 
-  const pets = pgTable(`pets`, {
-    name: text("name"),
-    owner: text("owner"),
+  const pets = pgTable(`url_data`, {
+    url: text("url"),
+    shorted_url: text("shorted_url"),
   });
 
-  const result = await db.select().from(pets);
-
-  return NextResponse.json({ result }, { status: 200 });
+  const queryTest = await db.select().from(pets);
 }
