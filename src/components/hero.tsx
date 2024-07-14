@@ -8,7 +8,7 @@ import urlShortedQuantity from "@/utils/url-shorted-quantity";
 
 export const Hero = () => {
   const [urlInputValue, setUrlInputValue] = useState("");
-  const { setUrlID } = urlShortenedIDStore();
+  const { urlID, setUrlID } = urlShortenedIDStore();
   const [urlShortedQuantityValue, seturlShortedQuantityValue] =
     useState<number>();
 
@@ -47,7 +47,7 @@ export const Hero = () => {
             Shorten
           </button>
         ) : null}
-        <ShortedUrl />
+        {urlID != "" ? <ShortedUrl /> : null}
         <p>{`${urlShortedQuantityValue} links created`}</p>
       </div>
     </div>
