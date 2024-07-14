@@ -2,7 +2,6 @@
 
 import { pgTable, text } from "drizzle-orm/pg-core";
 import { drizzle } from "drizzle-orm/postgres-js";
-import { url } from "inspector";
 import postgres from "postgres";
 
 export const urlShortener = async (urlToShorten: string) => {
@@ -18,7 +17,7 @@ export const urlShortener = async (urlToShorten: string) => {
     return Math.floor(Math.random() * (max - min) + min);
   };
 
-  const urlShortened = `/${randomUrlID()}`;
+  const urlShortened = randomUrlID();
 
   const query = postgres(`${process.env.POSTGRES_URL}`);
 
