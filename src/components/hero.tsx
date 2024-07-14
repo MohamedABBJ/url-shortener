@@ -3,12 +3,21 @@
 import { urlShortener } from "@/utils/url-shortener";
 import { useEffect, useState } from "react";
 import { ShortedUrl } from "./shorted-url";
-import { usePathname } from "next/navigation";
 import urlShortenedIDStore from "@/store/url-shortened-id-store";
+import urlShortedQuantity from "@/utils/url-shorted-quantity";
 
 export const Hero = () => {
   const [urlInputValue, setUrlInputValue] = useState("");
   const { setUrlID } = urlShortenedIDStore();
+  const [urlShortedQuantityValue, seturlShortedQuantityValue] =
+    useState<number>();
+
+  useEffect(() => {
+    const getUrlShortedQuantity = async () => {
+      seturlShortedQuantityValue(await urlShortedQuantity());
+    };
+    getUrlShortedQuantity();
+  }, []);
 
   return (
     <div className="h-lvh flex items-center justify-center">
@@ -39,7 +48,7 @@ export const Hero = () => {
           </button>
         ) : null}
         <ShortedUrl />
-        <p>0 links created</p>
+        <p>{`${urlShortedQuantityValue} links created`}</p>
       </div>
     </div>
   );

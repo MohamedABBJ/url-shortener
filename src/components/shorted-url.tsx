@@ -1,11 +1,15 @@
+"use client";
+
 import urlShortenedIDStore from "@/store/url-shortened-id-store";
 import arrowLinkIcon from "../../public/arrowLink.svg";
 import copyURLIcon from "../../public/copyURL.svg";
 import resetURLIcon from "../../public/resetURL.svg";
 import { ShortedUrlButtonOptions } from "./shorted-url-options";
+import { useEffect, useState } from "react";
 
-export const ShortedUrl = (props: { shortedURL: string }) => {
+export const ShortedUrl = () => {
   const { urlID } = urlShortenedIDStore();
+  const [fullShortedUrl, setFullShortedUrl] = useState("");
   const options = [
     {
       name: "Visit",
@@ -24,12 +28,16 @@ export const ShortedUrl = (props: { shortedURL: string }) => {
     },
   ];
 
+  useEffect(() => {
+    setFullShortedUrl(`${window.location}${urlID}`);
+  }, [urlID]);
+
   return (
     <>
       <div className="bg-white">
         <input
           className="bg-gray-200"
-          value={`${window.location}${urlID}`}
+          value={fullShortedUrl}
           type="text"
           disabled
         />
