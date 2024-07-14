@@ -1,4 +1,4 @@
-import ShortedURLButtonOptionsProps from "@/interfaces/ShortedURLButtonOptionsProps";
+import ShortedURLButtonOptionsProps from "@/interfaces/shorted-url-button-options-props";
 import Image from "next/image";
 
 export const ShortedUrlButtonOptions = (
