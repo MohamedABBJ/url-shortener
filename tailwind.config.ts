@@ -14,18 +14,18 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        "changing-colors": "changing-colors-keyframes 20s ease-in infinite",
+        "changing-colors": "changing-colors-keyframes 30s ease-in infinite",
       },
       keyframes: {
         "changing-colors-keyframes": {
           "0%": {
-            "background-color": "#fffbeb",
+            "background-color": "#FEFFD8",
           },
           "50%": {
-            "background-color": "#fde68a",
+            "background-color": "#FFE8E8",
           },
           "100%": {
-            "background-color": "#fffbeb",
+            "background-color": "#FEFFD8",
           },
         },
       },

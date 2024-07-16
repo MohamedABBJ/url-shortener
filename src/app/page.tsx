@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 export default function Home() {
   return (
     <>
-      <div className="bg-gray-300">
+      <div className="animate-changing-colors">
         <Navbar />
         <Hero />
       </div>

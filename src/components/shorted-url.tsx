@@ -34,9 +34,9 @@ export const ShortedUrl = () => {
 
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-white w-6/12 rounded-lg">
         <input
-          className="bg-gray-200"
+          className="bg-gray-100 w-11/12 pl-4 font-bold text-xs mt-4 h-10 rounded-lg"
           value={fullShortedUrl}
           type="text"
           disabled

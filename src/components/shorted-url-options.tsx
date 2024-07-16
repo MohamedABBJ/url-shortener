@@ -21,14 +21,12 @@ export const ShortedUrlButtonOptions = (
   };
 
   return (
-    <div className="flex">
-      <Image width={15} src={props.iconSrc} alt="visitIcon" />
-      <button
-        className="p-5"
-        onClick={() => shortedButtonOptionsClickHandler()}
-      >
-        {props.name}
-      </button>
-    </div>
+    <button
+      onClick={() => shortedButtonOptionsClickHandler()}
+      className="flex items-center my-3 p-2 rounded-md border-2 border-gray-600-600 mx-4 hover:bg-gray-100"
+    >
+      <Image width={12} src={props.iconSrc} alt="visitIcon" />
+      <p className="mx-2 text-sm font-bold">{props.name}</p>
+    </button>
   );
 };
