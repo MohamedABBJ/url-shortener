@@ -22,8 +22,8 @@ export const Hero = () => {
 
   return (
     <div className="h-lvh flex items-center justify-center">
-      <div className="flex items-center flex-col gap-3 text-center">
-        <h1 className="text-5xl font-bold bg-gradient-to-b from-yellow-500 to-red-500  bg-clip-text text-transparent w-5/12">
+      <div className="mb-24 flex items-center flex-col gap-3 text-center">
+        <h1 className="text-5xl leading-[3.3rem] font-bold bg-gradient-to-b from-yellow-500 to-red-500  bg-clip-text text-transparent w-5/12">
           Turbocharge your marketing with Short Links.
         </h1>
         <div className="flex [&_p]:text-sm mt-8 last-of-type:[&_p]:ml-1">
