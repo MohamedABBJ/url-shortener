@@ -27,7 +27,7 @@ export const Hero = () => {
         <input
           onChange={(event) => setUrlInputValue(event.currentTarget.value)}
           onKeyDown={async (event) =>
-            event.key == "Enter"
+            event.key == "Enter" && urlInputValue.startsWith("http")
               ? setUrlID(
                   (await urlShortener(event.currentTarget.value)) as string
                 )
@@ -37,7 +37,7 @@ export const Hero = () => {
           name=""
           id=""
         />
-        {urlInputValue != "" ? (
+        {urlInputValue != "" && urlInputValue.startsWith("http") ? (
           <button
             className="bg-black text-white rounded-lg"
             onClick={async () =>

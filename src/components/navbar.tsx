@@ -7,10 +7,10 @@ export const Navbar = () => {
           <h1>Pndek</h1>
         </div>
         <div className="mr-4">
-          <button className="rounded-2xl bg-white text-black mr-4">
-            Sign In
+          <button className="rounded-full px-4 py-2 bg-white text-black mr-4">
+            Sign in
           </button>
-          <button className="rounded-3xl bg-black text-white p-3">
+          <button className="rounded-3xl bg-black text-white px-5 py-2">
             Try for free
           </button>
         </div>

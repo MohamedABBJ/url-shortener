@@ -1,3 +1,4 @@
+import { middleware } from "@/middleware";
 import { eq } from "drizzle-orm";
 import { pgTable, text } from "drizzle-orm/pg-core";
 import { drizzle } from "drizzle-orm/postgres-js";
@@ -16,6 +17,4 @@ export default async function Page({ params }: { params: { url: string } }) {
     .select()
     .from(url_data)
     .where(eq(url_data.shorted_url, params.url));
-
-  redirect(obtainedData[0].og_url as string);
 }

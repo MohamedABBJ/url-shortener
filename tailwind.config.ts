@@ -13,22 +13,22 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      animation:{
-        'changing-colors' : 'changing-colors-keyframes 20s ease-in infinite',
+      animation: {
+        "changing-colors": "changing-colors-keyframes 20s ease-in infinite",
       },
-      keyframes:{
-        'changing-colors-keyframes':{
-          '0%':{
-            'background-color': '#fffbeb',
+      keyframes: {
+        "changing-colors-keyframes": {
+          "0%": {
+            "background-color": "#fffbeb",
           },
-          '50%':{
-            'background-color': '#fde68a',
+          "50%": {
+            "background-color": "#fde68a",
+          },
+          "100%": {
+            "background-color": "#fffbeb",
+          },
         },
-        '100%':{
-            'background-color': '#fffbeb',
-        },
-      }
-    },
+      },
     },
   },
   plugins: [],
