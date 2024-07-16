@@ -1,9 +1,12 @@
+import Image from "next/image";
+import LogoScissors from "../../public/logoScissors.svg";
+
 export const Navbar = () => {
   return (
     <>
       <div className="h-16 outline-dashed flex justify-between items-center">
         <div className="flex items-center ml-6 gap-2">
-          <img className="w-8" src="/logoScissors.svg" alt="logoIcon" />
+          <Image className="w-8" src={LogoScissors} alt="logoIcon" />
           <h1>Pndek</h1>
         </div>
         <div className="mr-4">
