@@ -22,7 +22,7 @@ export const Hero = () => {
 
   return (
     <div className="h-lvh flex items-center justify-center">
-      <div className="mb-24 flex items-center flex-col gap-3 text-center">
+      <div className="mb-20 flex items-center flex-col gap-3 text-center">
         <h1 className="text-5xl leading-[3.3rem] font-bold bg-gradient-to-b from-yellow-500 to-red-500  bg-clip-text text-transparent w-5/12">
           Turbocharge your marketing with Short Links.
         </h1>
@@ -31,7 +31,7 @@ export const Hero = () => {
           <p className="font-bold">Big Impact</p>
         </div>
         <input
-          className="w-6/12 h-8 rounded-lg drop-shadow-xl pl-3"
+          className="w-6/12 text-sm h-10 rounded-lg drop-shadow-xl pl-3 placeholder:text-gray-500"
           onChange={(event) => setUrlInputValue(event.currentTarget.value)}
           placeholder={exampleURL}
           onKeyDown={async (event) =>
