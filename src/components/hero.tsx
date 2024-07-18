@@ -23,15 +23,15 @@ export const Hero = () => {
   return (
     <div className="h-lvh flex items-center justify-center">
       <div className="mb-20 flex items-center flex-col gap-3 text-center">
-        <h1 className="text-5xl leading-[3.3rem] font-bold bg-gradient-to-b from-yellow-500 to-red-500  bg-clip-text text-transparent w-5/12">
+        <h1 className="text-5xl scale-75 md:scale-100 leading-[3.3rem] font-bold bg-gradient-to-b from-yellow-500 to-red-500  bg-clip-text text-transparent w-[450px]">
           Turbocharge your marketing with Short Links.
         </h1>
-        <div className="flex [&_p]:text-sm mt-8 last-of-type:[&_p]:ml-1">
+        <div className="flex [&_p]:text-sm md:mt-8 mt-0 last-of-type:[&_p]:ml-1">
           <p>Shortener url,</p>
           <p className="font-bold">Big Impact</p>
         </div>
         <input
-          className="w-6/12 text-sm h-10 rounded-lg drop-shadow-xl pl-3 placeholder:text-gray-500"
+          className="md:w-full w-80 text-sm h-10 rounded-lg drop-shadow-xl pl-3 placeholder:text-gray-500"
           onChange={(event) => setUrlInputValue(event.currentTarget.value)}
           placeholder={exampleURL}
           onKeyDown={async (event) =>

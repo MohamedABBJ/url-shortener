@@ -21,6 +21,7 @@ const urlShortedQuantity = async () => {
       .from(url_data);
     return quantityOfShortedUrl[0].value;
   } catch (error) {
+    //this is a server function, this won't work
     alert(
       `Ops! the quantity of shorted Url's cannot be fetched error:${error}`
     );
