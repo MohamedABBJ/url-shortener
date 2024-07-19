@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import ScissorsIcon from "../../../public/logoScissors.svg";
+import { signIn } from "next-auth/react";
+import SignInButtons from "./sign-in-buttons";
 
 export default function SignIn() {
   const signInOptions = [
@@ -21,15 +23,16 @@ export default function SignIn() {
 
   return (
     <div className="flex items-center justify-center w-full h-lvh outline [&_div]:flex [&_div]:flex-col">
-      <div className="outline flex-col flex items-center py-36 px-52 rounded-lg">
-        <Image width={17} src={ScissorsIcon} alt="scissorsIcon" />
+      <div className="outline flex-col flex items-center p-11 rounded-lg">
+        <Image width={50} src={ScissorsIcon} alt="scissorsIcon" />
         <p>Welcome to pndek.xyz</p>
         <p>Start creating short links with Supercharge</p>
         <div>
           {signInOptions.map((element) => (
-            <button
+            <SignInButtons
+              {...{ optionName: element.optionName, id: element.id }}
               key={element.id}
-            >{`Sign in with ${element.optionName}`}</button>
+            />
           ))}
         </div>
       </div>
