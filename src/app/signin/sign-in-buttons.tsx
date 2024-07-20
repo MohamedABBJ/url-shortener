@@ -1,6 +1,7 @@
 import SignInButtonProps from "@/interfaces/sign-in-button-props";
 import githubSignIn from "@/utils/github-sign-in";
 import googleSignIn from "@/utils/google-sign-in";
+import Image from "next/image";
 
 const SignInButtons = (props: SignInButtonProps) => {
   return (
@@ -9,9 +10,12 @@ const SignInButtons = (props: SignInButtonProps) => {
         const request = window.open(await googleSignIn());
         console.log(request);
       }}
-      className="border border-black px-40 mt-1 text-gray-600 text-sm"
+      className=" border border-gray-500 rounded-xl flex py-2  px-32 gap-2 items-center  mt-1 text-gray-500 text-sm hover:bg-gray-200 transition-colors duration-100"
       key={props.id}
-    >{`Sign in with ${props.optionName}`}</button>
+    >
+      <Image width={18} src={props.icon} alt={`${props.optionName}Icon`} />
+      {`Sign in with ${props.optionName}`}
+    </button>
   );
 };
 

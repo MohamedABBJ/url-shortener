@@ -2,7 +2,7 @@
 import { Hero } from "@/components/hero";
 import { Navbar } from "@/components/navbar";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useSearchParams } from "next/navigation";
 
 export default function Home() {
   return (
