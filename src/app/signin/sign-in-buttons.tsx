@@ -10,7 +10,7 @@ const SignInButtons = (props: SignInButtonProps) => {
         const request = window.open(await googleSignIn());
         console.log(request);
       }}
-      className=" border border-gray-500 rounded-xl flex py-2  px-32 gap-2 items-center  mt-1 text-gray-500 text-sm hover:bg-gray-200 transition-colors duration-100"
+      className=" border border-gray-300 rounded-lg flex py-3 px-36 gap-2 items-center  mt-1 text-gray-500 text-sm hover:bg-gray-200 transition-colors duration-100"
       key={props.id}
     >
       <Image width={18} src={props.icon} alt={`${props.optionName}Icon`} />

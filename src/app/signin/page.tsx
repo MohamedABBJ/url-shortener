@@ -31,10 +31,17 @@ export default function SignIn() {
   return (
     <div className="animate-changing-colors flex items-center justify-center w-full h-lvh outline [&_div]:flex [&_div]:flex-col">
       <div className="bg-white flex-col flex items-center p-11 rounded-xl drop-shadow-lg">
-        <Image width={50} src={ScissorsIcon} alt="scissorsIcon" />
-        <p>Welcome to pndek.xyz</p>
-        <p>Start creating short links with Supercharge</p>
-        <div className="mt-12">
+        <Image
+          className="mt-5"
+          width={50}
+          src={ScissorsIcon}
+          alt="scissorsIcon"
+        />
+        <p className="font-bold text-lg">Welcome to pndek.xyz</p>
+        <p className="text-xs text-gray-500">
+          Start creating short links with Supercharge
+        </p>
+        <div className="mt-10">
           {signInOptions.map((element) => (
             <SignInButtons
               {...{
