@@ -7,8 +7,7 @@ const SignInButtons = (props: SignInButtonProps) => {
   return (
     <button
       onClick={async () => {
-        const request = window.open(await googleSignIn({ mode: "userLogin" }));
-        console.log(request);
+        console.log(await googleSignIn());
       }}
       className=" border border-gray-300 rounded-lg flex py-3 px-36 gap-2 items-center  mt-1 text-gray-500 text-sm hover:bg-gray-200 transition-colors duration-100"
       key={props.id}
