@@ -1,10 +1,9 @@
 import { getUserGeneratedUrls } from "@/server/db/get-user-generated-url";
+import GeneratedUrls from "./generated-url";
 
 export default async function GeneratedURLTable() {
   const userGeneratedUrls = await getUserGeneratedUrls();
-  console.log(
-    userGeneratedUrls?.map((element) => console.log(element.user_email))
-  );
+
   return (
     <table className="border border-separate w-full">
       <thead>
@@ -14,6 +13,9 @@ export default async function GeneratedURLTable() {
           <th className="border">Short Urls</th>
         </tr>
       </thead>
+      {userGeneratedUrls?.map((element) => (
+        <GeneratedUrls key={element.id} generatedUrlData={element} />
+      ))}
     </table>
   );
 }

@@ -1,7 +1,7 @@
 import { auth } from "../../../auth";
 import postgres from "postgres";
 import { drizzle } from "drizzle-orm/postgres-js";
-import { pgTable, text } from "drizzle-orm/pg-core";
+import { date, pgTable, serial, text } from "drizzle-orm/pg-core";
 import { eq } from "drizzle-orm";
 
 export async function getUserGeneratedUrls() {
@@ -11,9 +11,11 @@ export async function getUserGeneratedUrls() {
   const query = postgres(`${process.env.POSTGRES_URL}`);
   const db = drizzle(query);
   const url_data = pgTable(`url_data`, {
+    id: serial("id").primaryKey(),
     user_email: text("user_email"),
     og_url: text("og_url"),
     shorted_url: text("shortened_url"),
+    date_created: date("date_created"),
   });
 
   try {
