@@ -12,8 +12,6 @@ export const urlShortener = async (urlToShorten: string) => {
   const session = await auth();
   const userEmail = session ? session.user?.email : "Guest";
 
-  console.log(session);
-
   const query = postgres(`${process.env.POSTGRES_URL}`);
   const db = drizzle(query);
   const url_data = pgTable(`url_data`, {

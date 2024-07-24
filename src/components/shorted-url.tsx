@@ -6,10 +6,10 @@ import copyURLIcon from "../../public/copyURL.svg";
 import resetURLIcon from "../../public/resetURL.svg";
 import { ShortedUrlButtonOptions } from "./shorted-url-options";
 import { useEffect, useState } from "react";
+import shortedUrlMaker from "@/utils/shorted-url-maker";
 
 export const ShortedUrl = () => {
   const { urlID } = urlShortenedIDStore();
-  const [fullShortedUrl, setFullShortedUrl] = useState("");
   const options = [
     {
       name: "Visit",
@@ -28,16 +28,12 @@ export const ShortedUrl = () => {
     },
   ];
 
-  useEffect(() => {
-    setFullShortedUrl(`${window.location}${urlID}`);
-  }, [urlID]);
-
   return (
     <>
       <div className="bg-white w-6/12 rounded-lg">
         <input
           className="bg-gray-100 w-11/12 pl-4 font-bold text-xs mt-4 h-10 rounded-lg"
-          value={fullShortedUrl}
+          value={shortedUrlMaker({ shortedUrlID: urlID })}
           type="text"
           disabled
         />
