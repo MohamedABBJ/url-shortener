@@ -1,4 +1,4 @@
-"use server";
+/* "use server";
 
 import { google } from "googleapis";
 import { cookies } from "next/headers";
@@ -25,7 +25,7 @@ const googleSignIn = () => {
 };
 
 export default googleSignIn;
-
+ */
 /*
 
   const checkUserIdentity = async () => {

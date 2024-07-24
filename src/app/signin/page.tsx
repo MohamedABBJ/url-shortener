@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import ScissorsIcon from "../../../public/logoScissors.svg";
 import { signIn } from "next-auth/react";

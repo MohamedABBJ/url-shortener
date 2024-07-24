@@ -1,8 +1,13 @@
 import Image from "next/image";
 import LogoScissors from "../../public/logoScissors.svg";
-import arrowRight from "../../public/arrowRight.svg";
+import { auth } from "../../auth";
+import SignInButtons from "./user-unsigned-buttons";
+import UserUnsignedButtons from "./user-unsigned-buttons";
+import UserSignedInButtons from "./user-signed-in-buttons";
 
-export const Navbar = () => {
+export const Navbar = async () => {
+  const session = await auth();
+
   return (
     <>
       <div className="md:px-12 px-6 py-5 absolute w-full flex justify-between items-center">
@@ -10,14 +15,12 @@ export const Navbar = () => {
           <Image width={25} src={LogoScissors} alt="logoIcon" />
           <h1 className="font-semibold text-xl">Pndek</h1>
         </div>
-        <div className="flex">
-          <button className="text-sm rounded-full px-4 py-2 bg-white text-black mr-3">
-            <p className="text-gray-500 font-medium">Sign in</p>
-          </button>
-          <button className="flex items-center text-sm rounded-2xl gap-1 bg-black text-white px-4 py-2">
-            <p className="font-medium">Try for free</p>
-            <Image src={arrowRight} alt="arrowRightIcon" />
-          </button>
+        <div className="flex items-center gap-3">
+          {session ? (
+            <UserSignedInButtons userEmail={session.user?.email as string} />
+          ) : (
+            <UserUnsignedButtons />
+          )}
         </div>
       </div>
     </>
