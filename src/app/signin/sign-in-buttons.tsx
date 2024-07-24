@@ -15,7 +15,7 @@ const SignInButtons = (props: SignInButtonProps) => {
     >
       <button
         type="submit"
-        className=" border border-gray-300 rounded-lg flex py-3 px-36 gap-2 items-center  mt-1 text-gray-500 text-sm hover:bg-gray-200 transition-colors duration-100"
+        className=" border border-gray-300 rounded-lg flex justify-center py-[0.6rem] md:w-[28rem] w-64 gap-2 items-center box-border mt-1 text-gray-500 text-sm hover:bg-gray-200 transition-colors duration-100"
         key={props.id}
       >
         <Image width={18} src={props.icon} alt={`${props.optionName}Icon`} />
