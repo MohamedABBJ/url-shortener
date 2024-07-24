@@ -1,9 +1,12 @@
 import { signOut } from "../../auth";
+import UserEmail from "./user-email";
 
-export default function UserSignedInButtons(props: { userEmail: string }) {
+export default async function UserSignedInButtons(props: {
+  userEmail: string;
+}) {
   return (
     <>
-      <p className="text-xs w-28 truncate text-gray-500">{props.userEmail}</p>
+      <UserEmail userEmail={props.userEmail} />
       <form
         action={async () => {
           "use server";
