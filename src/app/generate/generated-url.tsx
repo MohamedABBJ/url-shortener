@@ -27,14 +27,14 @@ export default function GeneratedUrls(props: {
 
   return (
     <tbody>
-      <tr className="[&_#first-element]:hover:bg-transparent [&_#last-elements]:hover:bg-gray-200 [&_#last-elements]:transition-color [&_#last-elements]:duration-100">
-        <th className="border" id="first-element">
+      <tr className="text-left text-xs  [&_th]:pl-4 [&_th]:text-gray-700 [&_th]:py-4 [&_#first-element]:hover:bg-transparent [&_#last-elements]:hover:bg-gray-200 [&_#last-elements]:transition-color [&_#last-elements]:duration-100">
+        <th className="min-w-28 font-normal" id="first-element">
           {formattedDate}
         </th>
-        <th className="border" id="last-elements">
+        <th className="max-w-40 break-words font-normal" id="last-elements">
           {ogURL}
         </th>
-        <th className="border" id="last-elements">
+        <th id="last-elements">
           <Link href={shortedUrl}>
             <p className="underline">{shortedUrl}</p>
           </Link>

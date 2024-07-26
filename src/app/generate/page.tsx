@@ -10,8 +10,8 @@ export default function UserGeneratedURL() {
         </button>
       </div>
       {/*user generated URL content */}
-      <div className="p-12">
-        <h1>Generate Urls</h1>
+      <div className="px-20 py-4">
+        <h1 className="text-3xl font-bold">Generate Urls</h1>
         <GeneratedURLTable />
       </div>
     </div>
