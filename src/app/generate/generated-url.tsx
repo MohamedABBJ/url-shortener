@@ -12,7 +12,7 @@ export default function GeneratedUrls(props: {
     setShortedUrl(
       shortedUrlMaker({
         shortedUrlID: props.generatedUrlData.shorted_url as string,
-      }) as string
+      }).replace("generate", "") as string
     );
   }, [props.generatedUrlData.shorted_url]);
 
