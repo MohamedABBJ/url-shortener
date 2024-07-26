@@ -2,6 +2,7 @@
 import DBDataProps from "@/interfaces/db-data-props";
 import dateFormatter from "@/utils/date-formatter";
 import shortedUrlMaker from "@/utils/shorted-url-maker";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export default function GeneratedUrls(props: {
@@ -26,10 +27,18 @@ export default function GeneratedUrls(props: {
 
   return (
     <tbody>
-      <tr>
-        <th className="border">{formattedDate}</th>
-        <th className="border">{ogURL}</th>
-        <th className="border">{shortedUrl}</th>
+      <tr className="[&_#first-element]:hover:bg-transparent [&_#last-elements]:hover:bg-gray-200 [&_#last-elements]:transition-color [&_#last-elements]:duration-100">
+        <th className="border" id="first-element">
+          {formattedDate}
+        </th>
+        <th className="border" id="last-elements">
+          {ogURL}
+        </th>
+        <th className="border" id="last-elements">
+          <Link href={shortedUrl}>
+            <p className="underline">{shortedUrl}</p>
+          </Link>
+        </th>
       </tr>
     </tbody>
   );
