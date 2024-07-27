@@ -27,9 +27,9 @@ export default function GeneratedUrls(props: {
 
   return (
     <tbody>
-      <tr className="text-left text-xs  [&_th]:pl-4 [&_th]:text-gray-700 [&_th]:py-4 [&_#first-element]:hover:bg-transparent [&_#last-elements]:hover:bg-gray-200 [&_#last-elements]:transition-color [&_#last-elements]:duration-100">
+      <tr className="text-left text-xs [&_th]:bg-white [&_th]:pl-4 [&_th]:text-gray-700 [&_th]:py-4 [&_#first-element]:hover:bg-transparent [&_#last-elements]:hover:bg-gray-200 [&_#last-elements]:transition-color [&_#last-elements]:duration-100">
         <th
-          className="min-w-24 sticky bg-white font-normal first:left-0"
+          className="min-w-28 sticky font-normal first:left-0"
           id="first-element"
         >
           {formattedDate}
@@ -37,7 +37,7 @@ export default function GeneratedUrls(props: {
         <th className="font-normal" id="last-elements">
           {ogURL + "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"}
         </th>
-        <th id="last-elements">
+        <th id="last-elements" className="pr-4">
           <Link href={shortedUrl}>
             <p className="underline">{shortedUrl}</p>
           </Link>
