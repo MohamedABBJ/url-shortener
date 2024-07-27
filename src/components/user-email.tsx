@@ -12,9 +12,10 @@ export default function UserEmail(props: { userEmail: string }) {
           setOuterWindowHanlder("block");
           setShowMenu(true);
         }}
-        className="text-xs w-28 truncate text-gray-500 hover:underline"
+        className="text-xs w-28 h-9 truncate text-gray-500 hover:underline relative"
       >
-        {props.userEmail}
+        <div className="top-0 w-3 h-3 rounded-full bg-red-600 absolute right-0" />
+        ;{props.userEmail}
       </button>
       {showMenu ? <UserEmailMenu userEmail={props.userEmail} /> : null}
     </>
