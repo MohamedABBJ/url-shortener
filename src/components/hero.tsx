@@ -56,10 +56,13 @@ export const Hero = () => {
           </button>
         ) : null}
         {urlID != "" ? <ShortedUrl /> : null}
-        <p className="text-xs font-bold mt-4">
-          {urlShortedQuantityValue &&
-            `${urlShortedQuantityValue} links created`}
-        </p>
+        <div className="flex items-center gap-2 mt-6">
+          <div className="w-3 h-3 rounded-full bg-green-500" />
+          <p className="text-xs font-bold">
+            {urlShortedQuantityValue &&
+              `${urlShortedQuantityValue} links created`}
+          </p>
+        </div>
       </div>
     </div>
   );
