@@ -57,7 +57,8 @@ export const Hero = () => {
         ) : null}
         {urlID != "" ? <ShortedUrl /> : null}
         <div className="flex items-center gap-2 mt-6">
-          <div className="w-3 h-3 rounded-full bg-green-500" />
+          <div className="w-3 h-3 rounded-full bg-green-500 animate-ping" />
+          <div className="w-3 h-3 absolute rounded-full bg-green-500" />
           <p className="text-xs font-bold">
             {urlShortedQuantityValue &&
               `${urlShortedQuantityValue} links created`}
