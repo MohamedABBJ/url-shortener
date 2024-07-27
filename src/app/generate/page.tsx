@@ -10,9 +10,14 @@ export default function UserGeneratedURL() {
         </button>
       </div>
       {/*user generated URL content */}
-      <div className="px-20 py-4">
+      <div className="px-4 lg:px-20 py-4">
         <h1 className="text-3xl font-bold">Generate Urls</h1>
-        <GeneratedURLTable />
+        <p className="block lg:hidden text-xs text-gray-500 mt-8">
+          On mobile scroll right for more information
+        </p>
+        <div className="overflow-auto">
+          <GeneratedURLTable />
+        </div>
       </div>
     </div>
   );

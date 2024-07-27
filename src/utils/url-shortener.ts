@@ -38,6 +38,6 @@ export const urlShortener = async (urlToShorten: string) => {
       return randomID;
     }
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 };
