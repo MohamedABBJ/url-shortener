@@ -10,7 +10,7 @@ export const Navbar = async () => {
 
   return (
     <>
-      <div className="md:px-12 px-6 py-5 absolute w-full flex justify-between items-center">
+      <div className="md:pl-8 md:pr-12 px-6 py-5 absolute w-full flex justify-between items-center">
         <div className="flex items-center gap-1 ml-4">
           <Image width={25} src={LogoScissors} alt="logoIcon" />
           <h1 className="font-semibold text-xl">Pndek</h1>

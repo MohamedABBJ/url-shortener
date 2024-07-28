@@ -47,7 +47,7 @@ export const Hero = () => {
         />
         {urlInputValue != "" && urlInputValue.startsWith("http") ? (
           <button
-            className="text-sm bg-black text-white rounded-lg h-10 w-6/12 hover:bg-gray-600 transition-colors duration-300"
+            className="md:w-full w-80 text-sm bg-black text-white rounded-lg h-10 hover:bg-gray-600 transition-colors duration-300"
             onClick={async () =>
               setUrlID((await urlShortener(urlInputValue)) as string)
             }

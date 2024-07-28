@@ -30,7 +30,7 @@ export const ShortedUrl = () => {
 
   return (
     <>
-      <div className="bg-white w-6/12 rounded-lg">
+      <div className="bg-white rounded-lg md:w-full w-80 ">
         <input
           className="bg-gray-100 w-11/12 pl-4 font-bold text-xs mt-4 h-10 rounded-lg"
           value={shortedUrlMaker({ shortedUrlID: urlID })}

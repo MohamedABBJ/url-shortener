@@ -17,7 +17,7 @@ export default async function UserSignedInButtons(props: {
           type="submit"
           className="bg-white text-xs text-gray-500 border-gray-300 border-[1px] py-2 px-4 rounded-xl"
         >
-          logout
+          Logout
         </button>
       </form>
     </>
