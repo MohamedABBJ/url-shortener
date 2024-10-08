@@ -8,8 +8,8 @@ export default function UserEmailMenu(props: { userEmail: string }) {
       <p className="text-sm font-bold">{props.userEmail}</p>
       <div className="border-[1px] border-gray-50 w-full my-1" />
       <p className="text-xs text-gray-400">
-        Created by{" "}
-        <Link href={"www.google.com"} className="underline">
+        Page design inspired by{" "}
+        <Link href={"https://layers.to/dinivannendra"} className="underline">
           dinivan nendra
         </Link>{" "}
         for saving your shorten url
