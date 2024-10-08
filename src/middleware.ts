@@ -19,9 +19,10 @@ export async function middleware(request: NextRequest) {
     .where(eq(url_data.shorted_url, request.nextUrl.pathname.substring(1)));
 
  
-  return typeof obtainedData[0].og_url == "undefined"
-    ? null
-    : NextResponse.redirect(obtainedData[0].og_url as string);
+  return (
+     obtainedData[0] &&
+    NextResponse.redirect(obtainedData[0].og_url as string)
+  );
 }
 
 export const config = {
