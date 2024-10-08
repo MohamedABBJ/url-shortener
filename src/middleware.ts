@@ -18,7 +18,7 @@ export async function middleware(request: NextRequest) {
     .from(url_data)
     .where(eq(url_data.shorted_url, request.nextUrl.pathname.substring(1)));
 
-  return NextResponse.redirect(obtainedData[0].og_url as string);
+  return NextResponse.redirect(obtainedData[0]?.og_url as string);
 }
 
 export const config = {
