@@ -3,7 +3,7 @@
 <br />
 <div align="center">
 
-  <h3 align="center">Url-shortener</h3>
+  <h3 align="center">Url-shortener </h3>
 
   <p align="center">
     A simple url shortener to shorten your url!
