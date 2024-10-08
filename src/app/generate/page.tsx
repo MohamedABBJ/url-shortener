@@ -5,9 +5,6 @@ import GeneratedUrlSyncPopUp from "./generated-url-sync-popup";
 export default function UserGeneratedURL() {
   return (
     <>
-      <div className="absolute w-full z-30">
-        <GeneratedUrlSyncPopUp />
-      </div>
       <div className="animate-changing-colors h-lvh">
         {/* Top Content */}
         <div className="sticky top-0 py-4 px-12 z-20 backdrop-blur-sm">
