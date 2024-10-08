@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/othneildrew/Best-README-Template">
-    <img src="./public/logoScissors.svg" alt="Logo" width="80" height="80">
+    <img src="./public/logoReadme.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">Url-shortener</h3>
